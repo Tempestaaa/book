@@ -33,9 +33,6 @@ export default function ShopPage() {
               </Button>
             </ButtonGroup>
             <ButtonGroup>
-              <ButtonGroupText>Showing 12 out of 120 books</ButtonGroupText>
-            </ButtonGroup>
-            <ButtonGroup>
               <Button variant="ghost" size="icon-lg">
                 <Grid />
               </Button>
@@ -43,7 +40,13 @@ export default function ShopPage() {
                 <SortDesc />
               </Button>
             </ButtonGroup>
+            <ButtonGroup className="sr-only">
+              <Button variant="ghost" className="hover:bg-red-600! h-10">
+                Clear all
+              </Button>
+            </ButtonGroup>
           </ButtonGroup>
+
           <ButtonGroup>
             <Button variant="outline" size="icon-lg" disabled>
               <ArrowLeft />
@@ -59,11 +62,11 @@ export default function ShopPage() {
         </section>
 
         <ul className="grid grid-cols-3 gap-6">
-          {[...Array(5)].map((_, id) => (
+          {[...Array(12)].map((_, id) => (
             <div key={id} className="overflow-hidden">
-              <div className="h-125 relative">
+              <Link href="#" className="h-125 block relative">
                 <Image src="/test.jpg" alt="Book's cover" fill />
-              </div>
+              </Link>
               <div className="py-2">
                 <Link href="#">
                   <small className="text-xs text-muted-foreground hover-text">
