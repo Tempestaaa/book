@@ -10,7 +10,7 @@ export default function ShopTools() {
     <section className="flex items-center justify-between">
       <ButtonGroup>
         <ButtonGroup>
-          <Button variant="ghost" size="icon-lg">
+          <Button variant="ghost" size="icon-lg" asChild>
             <label htmlFor="shop-sidebar" className="cursor-pointer">
               <Filter />
             </label>

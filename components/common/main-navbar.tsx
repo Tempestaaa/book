@@ -1,3 +1,5 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
 import {
@@ -6,14 +8,22 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Popover, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { Separator } from "@/components/ui/separator";
 import {
+  Award,
   Bell,
   DollarSign,
   Globe,
+  KeyRound,
+  LogOut,
   Search,
   ShoppingCart,
+  Ticket,
   UserRound,
 } from "lucide-react";
 import Image from "next/image";
@@ -23,6 +33,13 @@ const navbarMenu = [
   { label: "Home", href: "/" },
   { label: "Shop", href: "/shop" },
   { label: "About", href: "/about" },
+];
+
+const userMenu = [
+  { label: "Profile", href: "profile", icon: UserRound },
+  { label: "Change Password", href: "change-password", icon: KeyRound },
+  { label: "Notification", href: "notification", icon: Bell },
+  { label: "Voucher", href: "voucher", icon: Ticket },
 ];
 
 export default function MainNavbar() {
@@ -71,7 +88,9 @@ export default function MainNavbar() {
             <ModeSwitchIcon />
           </Button>
         </ButtonGroup>
+
         <Separator orientation="vertical" />
+
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="ghost" className="gap-3">
@@ -79,6 +98,45 @@ export default function MainNavbar() {
               <UserRound />
             </Button>
           </PopoverTrigger>
+          <PopoverContent
+            align="end"
+            className="p-1 w-60 flex flex-col bg-background"
+          >
+            <div className="flex items-center gap-2 p-1">
+              <Avatar className="size-10">
+                <AvatarImage />
+                <AvatarFallback>VN</AvatarFallback>
+              </Avatar>
+              <div className="space-y-1">
+                <p className="small-font-size">Username</p>
+                <div className="flex items-center gap-1 text-[10px] text-muted-foreground bg-muted px-2 rounded-full">
+                  <Award className="size-2.5" />
+                  <span>Silver member</span>
+                </div>
+              </div>
+            </div>
+            <Separator className="my-1 px-1" />
+            <menu className="space-y-1 bg-card p-1 rounded-md">
+              {userMenu.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.href}
+                    href={`/user/${item.href}`}
+                    className="flex items-center gap-4 py-2 px-3 rounded hover:bg-muted"
+                  >
+                    <Icon className="size-3.5" />
+                    <p className="small-font-size">{item.label}</p>
+                  </Link>
+                );
+              })}
+            </menu>
+            <Separator className="my-1 px-1" />
+            <button className="flex items-center gap-4 py-2 px-3 rounded hover:bg-red-600/20 text-red-600">
+              <LogOut className="size-3.5" />
+              <p className="small-font-size">Logout</p>
+            </button>
+          </PopoverContent>
         </Popover>
       </section>
     </nav>
