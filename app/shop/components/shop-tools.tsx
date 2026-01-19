@@ -1,0 +1,34 @@
+import DisplayButton from "@/app/shop/components/display-button";
+import SortButton from "@/app/shop/components/sort-button";
+import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
+import Pagination from "@/components/ui/pagination";
+import { ChevronLeft } from "lucide-react";
+
+export default function ShopTools() {
+  return (
+    <section className="flex items-center justify-between">
+      <ButtonGroup>
+        <ButtonGroup>
+          <Button variant="outline" size="icon-lg">
+            <ChevronLeft />
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <DisplayButton />
+          <SortButton />
+        </ButtonGroup>
+        <ButtonGroup className="sr-only">
+          <Button
+            variant="ghost"
+            className="text-red-500 h-10 hover:bg-red-500/20! hover:ring-2 hover:ring-red-500"
+          >
+            Clear all filters (1)
+          </Button>
+        </ButtonGroup>
+      </ButtonGroup>
+
+      <Pagination />
+    </section>
+  );
+}
