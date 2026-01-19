@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function BookCard() {
   return (
     <div className="overflow-hidden hover:bg-muted transition-colors duration-300">
-      <Link href="#" className="h-125 block relative">
+      <Link href="#" className="h-120 block relative">
         <Image src="/test.jpg" alt="Book's cover" fill />
       </Link>
 

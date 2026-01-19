@@ -3,15 +3,17 @@ import SortButton from "@/app/shop/components/sort-button";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
 import Pagination from "@/components/ui/pagination";
-import { ChevronLeft } from "lucide-react";
+import { Filter } from "lucide-react";
 
 export default function ShopTools() {
   return (
     <section className="flex items-center justify-between">
       <ButtonGroup>
         <ButtonGroup>
-          <Button variant="outline" size="icon-lg">
-            <ChevronLeft />
+          <Button variant="ghost" size="icon-lg">
+            <label htmlFor="shop-sidebar" className="cursor-pointer">
+              <Filter />
+            </label>
           </Button>
         </ButtonGroup>
         <ButtonGroup>

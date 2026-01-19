@@ -31,7 +31,7 @@ export default function SortButton() {
         </Button>
       </PopoverTrigger>
 
-      <PopoverContent align="start" className="w-60 p-2">
+      <PopoverContent align="start" className="w-60 p-1">
         <ul className="space-y-1">
           {sortOptions.map((opt) => {
             const Icon = opt.icon;
@@ -40,7 +40,7 @@ export default function SortButton() {
                 key={opt.value}
                 value={opt.value}
                 onClick={() => setOption(opt)}
-                className={`p-2 rounded-md hover:bg-muted transition-colors duration-300 flex items-center gap-4 cursor-pointer ${isActive(opt.value) && "bg-muted"}`}
+                className={`py-2 px-3 rounded hover:bg-muted transition-colors duration-300 flex items-center gap-4 cursor-pointer ${isActive(opt.value) && "bg-muted"}`}
               >
                 <Icon className="size-4" />
                 <p className="small-font-size">{opt.label}</p>
