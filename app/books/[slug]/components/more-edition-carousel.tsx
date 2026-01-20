@@ -20,11 +20,11 @@ export default function MoreEditionCarousel() {
       ]}
       className="w-full max-w-full"
     >
-      <p className="large-font-size mb-2">More edition</p>
+      <p className="large-font-size mb-2">More editions</p>
 
       <CarouselContent>
         {[...Array(10)].map((_, id) => (
-          <CarouselItem key={id} className="basis-1/5 space-y-2">
+          <CarouselItem key={id} className="basis-1/4 space-y-2">
             <div className="h-72 bg-card"></div>
             <div className="text-xs *:leading-relaxed">
               <p>Mass Market Paperback</p>

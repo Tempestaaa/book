@@ -230,7 +230,11 @@ export default async function BookDetailsPage({ params }: Props) {
 
           <Separator />
 
-          {/* <RelatedBooks /> */}
+          <div className="overflow-hidden">
+            <RelatedBooks />
+          </div>
+
+          <Separator />
         </section>
       </section>
     </main>

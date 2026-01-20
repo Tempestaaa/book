@@ -9,7 +9,7 @@ export default function BookCard() {
   return (
     <div className="overflow-hidden hover:bg-muted transition-colors duration-300">
       <Link href="/books/123" className="h-110 block relative bg-card">
-        <Image src="/test.jpg" alt="Book's cover" fill />
+        {/* <Image src="/test.jpg" alt="Book's cover" fill /> */}
       </Link>
 
       <div className="p-2">
@@ -42,13 +42,13 @@ export default function BookCard() {
               variant="ghost"
               className="hover:bg-foreground! hover:text-muted!"
             >
-              <ShoppingCart />
+              <Heart />
             </Button>
             <Button
               variant="ghost"
               className="hover:bg-foreground! hover:text-muted!"
             >
-              <Heart />
+              <ShoppingCart />
             </Button>
           </ButtonGroup>
         </div>
