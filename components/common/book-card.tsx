@@ -8,17 +8,17 @@ import Link from "next/link";
 export default function BookCard() {
   return (
     <div className="overflow-hidden hover:bg-muted transition-colors duration-300">
-      <Link href="#" className="h-120 block relative">
+      <Link href="/books/123" className="h-110 block relative bg-card">
         <Image src="/test.jpg" alt="Book's cover" fill />
       </Link>
 
       <div className="p-2">
-        <Link href="#">
+        <Link href="/author/123">
           <small className="text-xs text-muted-foreground hover-text">
             Author
           </small>
         </Link>
-        <Link href="#">
+        <Link href="/books/123">
           <p className="large-font-size line-clamp-1 hover-text">
             Frieren: Beyond the Journey&apos;s End
           </p>

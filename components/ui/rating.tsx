@@ -8,12 +8,19 @@ const MAX_STARS = 5;
 
 interface RatingProps {
   rate: number;
+  size?: "default" | "lg";
   className?: string;
   showScore?: boolean;
   description?: string;
 }
 
-const Rating = ({ rate, className, showScore, description }: RatingProps) => {
+const Rating = ({
+  rate,
+  size = "default",
+  className,
+  showScore,
+  description,
+}: RatingProps) => {
   if (!rate) return;
 
   const renderStars = () => {
@@ -28,7 +35,7 @@ const Rating = ({ rate, className, showScore, description }: RatingProps) => {
         <Star
           key={`rating-star-full-${i}`}
           className="fill-foreground stroke-foreground"
-        />
+        />,
       );
     }
 
@@ -37,7 +44,7 @@ const Rating = ({ rate, className, showScore, description }: RatingProps) => {
         <div key="rating-half-star" className="relative">
           <StarHalf className="absolute top-0 right-0 fill-foreground stroke-foreground" />
           <StarHalf className="absolute top-0 left-0 -scale-x-100 fill-foreground/15 stroke-foreground/15" />
-        </div>
+        </div>,
       );
     }
 
@@ -46,7 +53,7 @@ const Rating = ({ rate, className, showScore, description }: RatingProps) => {
         <Star
           key={`rating-star-empty-${i}`}
           className="fill-foreground/15 stroke-foreground/15"
-        />
+        />,
       );
     }
 
@@ -58,12 +65,16 @@ const Rating = ({ rate, className, showScore, description }: RatingProps) => {
     return (
       <div
         className={cn(
-          "flex items-center gap-1 [&_svg]:size-4 [&>div]:size-5",
-          className
+          `flex items-center gap-1 [&>div]:size-5 ${size === "lg" ? "[&_svg]:size-6" : "[&_svg]:size-4"}`,
+          className,
         )}
       >
         {renderStars()}
-        <span className="text-sm font-semibold ml-1">{rate.toFixed(1)}</span>
+        <span
+          className={`${size === "lg" ? "text-xl ml-3" : "text-sm"} font-semibold ml-1`}
+        >
+          {rate.toFixed(1)}
+        </span>
       </div>
     );
   }
@@ -88,7 +99,7 @@ const Rating = ({ rate, className, showScore, description }: RatingProps) => {
     <div
       className={cn(
         "flex items-center gap-1 [&_svg]:size-5 [&>div]:size-5",
-        className
+        className,
       )}
     >
       {renderStars()}
