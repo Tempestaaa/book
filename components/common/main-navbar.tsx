@@ -45,7 +45,7 @@ const userMenu = [
 export default function MainNavbar() {
   return (
     <nav className="fixed top-0 left-0 h-16 w-full border-b z-50 bg-background flex items-center">
-      <div className="grid grid-cols-2 *:h-full px-4 container mx-auto">
+      <div className="grid grid-cols-2 h-full px-4 container mx-auto">
         <section className="flex items-center gap-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">

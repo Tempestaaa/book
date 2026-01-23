@@ -16,7 +16,8 @@ export default function FilterWrapper({
           Clear
         </Button>
       </div>
-      <div className="mb-2">{children}</div>
+
+      <div className="mb-2 rounded-md overflow-hidden">{children}</div>
     </div>
   );
 }

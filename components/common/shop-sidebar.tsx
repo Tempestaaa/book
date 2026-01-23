@@ -64,11 +64,11 @@ const bookLanguages = ["English", "Vietnamese", "Chinese", "Japanese"];
 
 export default function ShopSidebar() {
   return (
-    <aside className="basis-72 has-[input:first-of-type:checked]:basis-0 border-r has-[input:first-of-type:checked]:border-0 h-[calc(100dvh-4rem)] sticky top-16 divide-y overflow-auto transition-all duration-300">
+    <aside className="basis-80 has-[input:first-of-type:checked]:basis-0 border-r has-[input:first-of-type:checked]:border-0 h-[calc(100dvh-4rem)] sticky top-16 divide-y overflow-auto transition-all duration-300">
       <input type="checkbox" id="shop-sidebar" className="sr-only" />
       <FilterWrapper label="Genres">
         <ScrollArea className="h-72">
-          <ul className="bg-card rounded-md overflow-hidden">
+          <ul className="bg-card rounded-md p-1">
             {bookGenres.map((genre) => (
               <FilterItem key={genre} data={genre} />
             ))}
@@ -83,7 +83,7 @@ export default function ShopSidebar() {
           min={0}
           max={100}
           step={10}
-          className="mt-4 mb-6"
+          className="pt-2 mb-4"
         />
         <p className="small-font-size text-muted-foreground">
           Set your budget range ($0-$100)
@@ -91,7 +91,7 @@ export default function ShopSidebar() {
       </FilterWrapper>
 
       <FilterWrapper label="Format">
-        <ul className="bg-card rounded-md overflow-hidden">
+        <ul className="bg-card rounded-md p-1">
           {bookFormats.map((format) => (
             <FilterItem key={format} data={format} />
           ))}
@@ -100,9 +100,9 @@ export default function ShopSidebar() {
 
       <FilterWrapper label="Publishers">
         <ScrollArea className="h-72">
-          <ul className="bg-card rounded-md overflow-hidden">
-            {bookPublishers.map((publisher) => (
-              <FilterItem key={publisher} data={publisher} />
+          <ul className="bg-card rounded-md p-1">
+            {bookPublishers.map((p) => (
+              <FilterItem key={p} data={p} />
             ))}
           </ul>
           <ScrollBar />
@@ -110,7 +110,7 @@ export default function ShopSidebar() {
       </FilterWrapper>
 
       <FilterWrapper label="Language">
-        <ul className="bg-card rounded-md overflow-hidden">
+        <ul className="bg-card rounded-md p-1">
           {bookLanguages.map((language) => (
             <FilterItem key={language} data={language} />
           ))}

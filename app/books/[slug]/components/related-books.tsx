@@ -24,7 +24,7 @@ export default function RelatedBooks() {
       ]}
       className="w-full max-w-full"
     >
-      <p className="large-font-size mb-2">Related books</p>
+      <p className="large-font-size mb-2">Readers also enjoyed</p>
 
       <CarouselContent>
         {[...Array(10)].map((_, id) => (

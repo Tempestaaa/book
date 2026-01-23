@@ -24,7 +24,7 @@ export default function MoreEditionCarousel() {
 
       <CarouselContent>
         {[...Array(10)].map((_, id) => (
-          <CarouselItem key={id} className="basis-1/4 space-y-2">
+          <CarouselItem key={id} className="basis-1/2 space-y-2">
             <div className="h-72 bg-card"></div>
             <div className="text-xs *:leading-relaxed">
               <p>Mass Market Paperback</p>
