@@ -64,7 +64,7 @@ const bookLanguages = ["English", "Vietnamese", "Chinese", "Japanese"];
 
 export default function ShopSidebar() {
   return (
-    <aside className="basis-72 has-[input:first-of-type:checked]:basis-0 border-r h-[calc(100dvh-4rem)] sticky top-16 divide-y overflow-auto transition-all duration-300">
+    <aside className="basis-72 has-[input:first-of-type:checked]:basis-0 border-r has-[input:first-of-type:checked]:border-0 h-[calc(100dvh-4rem)] sticky top-16 divide-y overflow-auto transition-all duration-300">
       <input type="checkbox" id="shop-sidebar" className="sr-only" />
       <FilterWrapper label="Genres">
         <ScrollArea className="h-72">

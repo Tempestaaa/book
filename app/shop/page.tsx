@@ -8,7 +8,7 @@ export default function ShopPage() {
     <main className="flex">
       <ShopSidebar />
 
-      <div className="flex-1 px-4 py-6 rounded-md space-y-6">
+      <div className="flex-1 px-4 py-4 rounded-md space-y-6">
         <ShopTools />
         <BookGrid />
         <ShopFooter />

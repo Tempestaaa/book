@@ -47,7 +47,7 @@ export default async function BookDetailsPage({ params }: Props) {
   const saleOffPercent = Math.ceil(100 - (9.99 * 100) / 10.99);
 
   return (
-    <main className="px-4 py-2 space-y-6">
+    <main className="px-4 py-2 space-y-4">
       <Breadcrumb className="h-10 flex items-center">
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -78,7 +78,7 @@ export default async function BookDetailsPage({ params }: Props) {
               <div className="">
                 <small className="text-xs text-muted-foreground">Price</small>
                 <div className="flex items-center gap-4">
-                  <h2>$9.99 </h2>
+                  <h2>$9.99</h2>
                   <span className="text-muted-foreground small-font-size">
                     <s>$10.99</s>
                   </span>
@@ -169,28 +169,28 @@ export default async function BookDetailsPage({ params }: Props) {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 *:h-fit">
+          <div className="space-y-4">
             <div className="bg-card rounded-md p-4 flex flex-col gap-1">
-              <p className="large-font-size mb-2">This edition</p>
+              <p className="large-font-size mb-1">This edition</p>
               {bookEdition.map((e) => (
                 <div
                   key={e.label}
                   className="flex items-center small-font-size"
                 >
-                  <p className="w-40 text-muted-foreground">{e.label}</p>
+                  <p className="w-52 text-muted-foreground">{e.label}</p>
                   <p>{e.content}</p>
                 </div>
               ))}
             </div>
 
             <div className="bg-card rounded-md p-4 flex flex-col gap-1">
-              <p className="large-font-size mb-2">More infomation</p>
+              <p className="large-font-size mb-1">More infomation</p>
               {bookMoreInfo.map((e) => (
                 <div
                   key={e.label}
                   className="flex items-center small-font-size"
                 >
-                  <p className="w-40 text-muted-foreground">{e.label}</p>
+                  <p className="w-52 text-muted-foreground">{e.label}</p>
                   <p>{e.content}</p>
                 </div>
               ))}
