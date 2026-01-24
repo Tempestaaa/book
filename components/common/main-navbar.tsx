@@ -1,3 +1,4 @@
+import NotificationButton from "@/components/common/notification-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,8 +18,6 @@ import { Separator } from "@/components/ui/separator";
 import {
   Award,
   Bell,
-  DollarSign,
-  Globe,
   KeyRound,
   LogOut,
   Search,
@@ -72,17 +71,9 @@ export default function MainNavbar() {
             <Button variant="ghost" size="icon-lg">
               <Search />
             </Button>
-            <Button variant="ghost" size="icon-lg">
-              <Bell />
-            </Button>
+            <NotificationButton />
             <Button variant="ghost" size="icon-lg">
               <ShoppingCart />
-            </Button>
-            <Button variant="ghost" size="icon-lg">
-              <DollarSign />
-            </Button>
-            <Button variant="ghost" size="icon-lg">
-              <Globe />
             </Button>
             <Button variant="ghost" size="icon-lg">
               <ModeSwitchIcon />
