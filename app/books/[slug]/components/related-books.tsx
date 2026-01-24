@@ -22,9 +22,9 @@ export default function RelatedBooks() {
           delay: 2000,
         }),
       ]}
-      className="w-full max-w-full"
+      className="space-y-3"
     >
-      <p className="large-font-size mb-2">Readers also enjoyed</p>
+      <h4>Readers also enjoyed</h4>
 
       <CarouselContent>
         {[...Array(10)].map((_, id) => (

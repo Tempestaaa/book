@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,19 +6,17 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Button } from "@/components/ui/button";
-import { ButtonGroup, ButtonGroupText } from "@/components/ui/button-group";
-import { Rating } from "@/components/ui/rating";
 import { Separator } from "@/components/ui/separator";
-import { Home, MessageCircleMore, ShoppingCart } from "lucide-react";
+import { Home } from "lucide-react";
 import Link from "next/link";
 import MoreEditionCarousel from "@/app/books/[slug]/components/more-edition-carousel";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import RelatedBooks from "@/app/books/[slug]/components/related-books";
 import BookSidebar from "@/app/books/[slug]/components/book-sidebar";
 import BookDetails from "@/app/books/[slug]/components/book-details";
 import DetailedSpecifications from "@/app/books/[slug]/components/detailed-specifications";
 import AuthorSection from "@/app/books/[slug]/components/author-section";
+import CommunityReview from "@/app/books/[slug]/components/community-review";
+import ReviewList from "@/app/books/[slug]/components/review-list";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -55,13 +52,17 @@ export default async function BookDetailsPage({ params }: Props) {
       <section className="flex flex-col lg:flex-row gap-12">
         <BookSidebar price={9.99} originalPrice={10.99} />
 
-        <section className="flex-1 space-y-6">
+        <section className="flex-1 flex flex-col gap-6 overflow-x-auto">
           <BookDetails />
           <DetailedSpecifications />
-          {/* <MoreEditionCarousel /> */}
+          <MoreEditionCarousel />
           <Separator />
           <AuthorSection />
-          {/* <RelatedBooks /> */}
+          <Separator />
+          <RelatedBooks />
+          <Separator />
+          <CommunityReview />
+          <ReviewList />
         </section>
       </section>
     </main>
