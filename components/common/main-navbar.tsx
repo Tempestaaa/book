@@ -72,8 +72,10 @@ export default function MainNavbar() {
               <Search />
             </Button>
             <NotificationButton />
-            <Button variant="ghost" size="icon-lg">
-              <ShoppingCart />
+            <Button variant="ghost" size="icon-lg" asChild>
+              <Link href="/cart">
+                <ShoppingCart />
+              </Link>
             </Button>
             <Button variant="ghost" size="icon-lg">
               <ModeSwitchIcon />
