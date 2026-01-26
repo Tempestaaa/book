@@ -54,7 +54,7 @@ export default function NotificationButton() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon-lg">
+        <Button variant="ghost">
           <Bell />
         </Button>
       </PopoverTrigger>

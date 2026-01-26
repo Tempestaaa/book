@@ -1,4 +1,5 @@
 import NotificationButton from "@/components/common/notification-button";
+import ThemeButton from "@/components/theme/theme-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -68,18 +69,16 @@ export default function MainNavbar() {
         </section>
         <section className="flex items-center justify-end gap-4">
           <ButtonGroup>
-            <Button variant="ghost" size="icon-lg">
+            <Button variant="ghost">
               <Search />
             </Button>
             <NotificationButton />
-            <Button variant="ghost" size="icon-lg" asChild>
+            <Button variant="ghost" asChild>
               <Link href="/cart">
                 <ShoppingCart />
               </Link>
             </Button>
-            <Button variant="ghost" size="icon-lg">
-              <ModeSwitchIcon />
-            </Button>
+            <ThemeButton />
           </ButtonGroup>
           <Separator orientation="vertical" />
           <Popover>
@@ -134,27 +133,3 @@ export default function MainNavbar() {
     </nav>
   );
 }
-
-const ModeSwitchIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="size-4.5"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-      <path d="M12 3l0 18" />
-      <path d="M12 9l4.65 -4.65" />
-      <path d="M12 14.3l7.37 -7.37" />
-      <path d="M12 19.6l8.85 -8.85" />
-    </svg>
-  );
-};
