@@ -5,7 +5,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Bell, MoreHorizontal } from "lucide-react";
+import { Bell, CheckCheck, MoreHorizontal } from "lucide-react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -65,8 +65,9 @@ export default function NotificationButton() {
       >
         <div className="flex items-center justify-between">
           <p className="large-font-size">Notification</p>
-          <Button variant="ghost">
-            <MoreHorizontal />
+          <Button variant="ghost" className="text-muted-foreground">
+            <CheckCheck />
+            Mark as read all
           </Button>
         </div>
 
