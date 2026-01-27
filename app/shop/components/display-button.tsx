@@ -8,11 +8,7 @@ export default function DisplayButton() {
   const [isDisplayGrid, setIsDisplayGrid] = useState(true);
 
   return (
-    <Button
-      variant="ghost"
-      size="icon-lg"
-      onClick={() => setIsDisplayGrid(!isDisplayGrid)}
-    >
+    <Button variant="ghost" onClick={() => setIsDisplayGrid(!isDisplayGrid)}>
       {isDisplayGrid ? <Grid /> : <Menu />}
     </Button>
   );

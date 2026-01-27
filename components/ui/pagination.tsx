@@ -60,7 +60,6 @@ export default function Pagination() {
       <Button
         type="button"
         variant="outline"
-        size="icon-lg"
         disabled={currentPage <= 1}
         onClick={handlePrevious}
       >
@@ -68,7 +67,7 @@ export default function Pagination() {
       </Button>
 
       <div
-        className={`flex items-center pr-3 border border-input bg-input/30 has-focus:ring-[3px] has-focus:ring-ring/50 transition-colors duration-300 ${currentPage === MIN_PAGES && "border-l!"}`}
+        className={`flex items-center h-9 pr-3 border border-input bg-input/30 has-focus:ring-[3px] has-focus:ring-ring/50 transition-colors duration-300 ${currentPage === MIN_PAGES && "border-l!"}`}
       >
         <Input
           type="number"
@@ -76,15 +75,14 @@ export default function Pagination() {
           onChange={handleInputChange}
           onBlur={handleInputBlur}
           onKeyDown={handleKeyDown}
-          className="w-16 text-center bg-transparent! border-0 focus-visible:ring-0 text-base!"
+          className="w-10 text-center bg-transparent! border-0 focus-visible:ring-0 text-base!"
         />
-        <span className="text-muted-foreground">/{MAX_PAGES}</span>
+        <span className="text-muted-foreground">/ {MAX_PAGES}</span>
       </div>
 
       <Button
         type="button"
         variant="outline"
-        size="icon-lg"
         disabled={currentPage >= MAX_PAGES}
         onClick={handleNext}
       >

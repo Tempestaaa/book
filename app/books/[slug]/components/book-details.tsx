@@ -55,12 +55,7 @@ export default function BookDetails() {
       <ButtonGroup className="flex flex-wrap">
         <ButtonGroupText>Genres</ButtonGroupText>
         {MOCK_GENRES.map((genre) => (
-          <Button
-            key={genre}
-            variant="outline"
-            size="sm"
-            className="rounded-full"
-          >
+          <Button key={genre} variant="outline">
             {genre}
           </Button>
         ))}

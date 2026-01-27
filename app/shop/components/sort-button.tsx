@@ -24,7 +24,7 @@ export default function SortButton() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon-lg" className="w-fit px-4">
+        <Button variant="ghost" className="w-fit px-4">
           <span>Sort: </span>
           <Icon />
           <span>{option.label}</span>

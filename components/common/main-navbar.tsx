@@ -97,7 +97,7 @@ export default function MainNavbar() {
                   <AvatarImage />
                   <AvatarFallback>VN</AvatarFallback>
                 </Avatar>
-                <div className="space-y-1">
+                <div className="space-y-2">
                   <p className="small-font-size">Username</p>
                   <div className="flex items-center gap-1 text-[10px] text-muted-foreground bg-muted px-2 rounded-full">
                     <Award className="size-2.5" />
@@ -106,14 +106,14 @@ export default function MainNavbar() {
                 </div>
               </div>
               <Separator className="my-1 px-1" />
-              <menu className="space-y-1 bg-card p-1 rounded-md">
+              <menu className="space-y-1 bg-card p-1 rounded">
                 {userMenu.map((item) => {
                   const Icon = item.icon;
                   return (
                     <Link
                       key={item.href}
                       href={`/user/${item.href}`}
-                      className="flex items-center gap-4 py-2 px-3 rounded hover:bg-muted"
+                      className="flex items-center gap-4 h-9 py-2 px-3 rounded hover:bg-muted"
                     >
                       <Icon className="size-3.5" />
                       <p className="small-font-size">{item.label}</p>
@@ -122,7 +122,7 @@ export default function MainNavbar() {
                 })}
               </menu>
               <Separator className="my-1 px-1" />
-              <button className="flex items-center gap-4 py-2 px-3 rounded hover:bg-red-600/20 text-red-600">
+              <button className="flex items-center gap-4 h-9 py-2 px-3 rounded hover:bg-red-500/30 text-red-600">
                 <LogOut className="size-3.5" />
                 <p className="small-font-size">Logout</p>
               </button>
